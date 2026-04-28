@@ -1,8 +1,9 @@
 import pygame
 pygame.init()
 #Cesty k obrázkům
-IMAGE_PATH = 'images/st.png'
+IMAGE_PATH = 'character/st.png'
 BUTTON_IMAGE_PATH = 'images/button.png'
+
 #Nastavení rozměrů
 WIDTH = 1280
 HEIGHT = 720
@@ -11,6 +12,10 @@ PLAYER_SPEED = 1
 PLAYER_WIDTH = 100
 PLAYER_HEIGHT = 100
 
+ENEMY_IMAGE = "images/button.png"
+
+BACKGROUND_IMAGE = "images/background.png"
+
 
 
 
@@ -18,6 +23,9 @@ PLAYER_HEIGHT = 100
 #Definice fontů
 title_font = pygame.font.SysFont('Arial',100)
 menu_font = pygame.font.SysFont('Arial',50)
+#Načtení a úprava obrázku tlačítka pro hlavní menu
+#button_img = pygame.image.load(BUTTON_IMAGE_PATH).convert_alpha()
+#button_img = pygame.transform.scale(button_img, (300, 80))
 #Hlavní menu - Texty a jejich umístění
 title_text = title_font.render("Accursed souls", True, (255,255,255))
 title_rect = title_text.get_rect(midleft=(70,70))
@@ -45,3 +53,4 @@ fullscreen_rect = fullscreen_text.get_rect(center=(440,200))
 
 main_volume_text = menu_font.render("Main volume", True, (255,255,255))
 main_volume_rect = main_volume_text.get_rect(center=(440,200))
+
